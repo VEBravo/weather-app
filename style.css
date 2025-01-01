@@ -1,0 +1,240 @@
+body{
+    background-color: rgb(35, 35, 35);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor gral */
+.contenedor{
+    height: 450px;
+    width: 400px;
+    background-color: rgb(57, 57, 57);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+#today{
+    margin-bottom: 20px;
+}
+
+/* Barra de busqueda */
+#contenedor-buscador{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 20px 0;
+}
+
+#buscador-ciudad{
+    background-color: rgb(89, 89, 89);
+    width: 100%;
+    height: 15px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-radius: 50px; 
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#buscador-ciudad::placeholder {
+  color: #aaa; 
+}
+
+#buscador-ciudad {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#lupa-buscar{
+    font-size: 15px;
+}
+
+#boton-buscar{
+    width: 40px;
+    margin: 0 0 0 5px;
+    background-color: rgb(89, 89, 89);
+    color: white;
+    border: none; 
+    border-radius: 100%; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#boton-buscar:hover {
+    background-color: #6d6d6d; 
+}
+
+#boton-buscar:active {
+    background-color: #969696; 
+    transform: scale(0.95); 
+}
+
+/* Contenedor Minima, maxima y barra */
+#contenedor-info-temperatura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#info-temperatura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    margin-top: 5px;
+}
+
+.temperatura-min-max{
+    padding: 0;
+    margin: 0;
+}
+
+.temperatura-min-max{
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(173, 173, 173);
+}
+
+.high-low{
+    margin: 0;
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+}
+
+/* Info clima actual */
+#contenedor-info-clima{
+    display: flex;
+}
+
+#foto-clima{
+    width: 30px;
+    display: none;
+}
+
+#estado-clima{
+    margin: 10px;
+    font-size: smaller;
+    color:  #aaa;
+}
+
+#temperatura-actual{
+    font-size: 100px;
+    margin: 0;
+    font-weight: lighter;
+    padding: 0;
+}
+
+/* Detalles clima */
+#contenedor-detalles-clima{
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+}
+
+.contenedor-icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    margin: 15px;
+}
+
+i{
+    font-size: 35px;
+    color: #58ecff;;
+}
+
+.info-detalles-clima{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 5px 0;
+}
+
+.detalles-clima{
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+.detalle-clima{
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    color: rgb(173, 173, 173);
+}
+
+.titulo-detalles-clima{
+    margin: 0;
+    font-size: smaller;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+}
+
+/* Botones */
+#contenedor-botones{
+    display: flex;
+    margin: 15px 0;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.boton-unidad-temperatura{
+    background-color: rgb(89, 89, 89);
+    width: 100%;
+    margin: 2px;
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.boton-unidad-temperatura:hover {
+    background-color: #6d6d6d; 
+}
+
+.boton-unidad-temperatura:active {
+    background-color: #969696; 
+    transform: scale(0.95); 
+}
+  
+.boton-unidad-temperatura:disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed; 
+}
+
+/* Barra */
+#contenedor-barra {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#barra {
+    height: 100%;
+    width: 0;
+    background-color: #58ecff;
+    transition: width 0.3s ease-in-out;
+}

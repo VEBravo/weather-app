@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de Clima</title>
+
+    <!-- Librerias Iconos -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="titulo-app">Weather App</h1>
+    <div class="contenedor">
+        <h2 id="today">TODAY</h2>
+        <div id="contenedor-buscador">
+            <input type="text" name="buscador-ciudad" id="buscador-ciudad" placeholder="Ingrese una ciudad">
+            <button id="boton-buscar"><i class='bx bx-search-alt-2' id="lupa-buscar"></i></button>
+        </div>
+    
+        <div id="contenedor-info-temperatura">
+            <div id="info-temperatura">
+                <p id="temperatura-mínima" class="temperatura-min-max">°C</p>
+                <p class="high-low">LOW</p>
+            </div>
+        
+            <div id="contenedor-barra">
+                <div id="barra" class="barra-progreso"></div>
+            </div>
+        
+            <div id="info-temperatura">
+                <p id="temperatura-máxima" class="temperatura-min-max">°C</p>
+                <p class="high-low">HIGH</p>
+            </div>
+        </div>
+    
+        <div id="contenedor-info-clima">
+            <img src="" alt="Foto Clima Actual" id="foto-clima">
+            <p id="estado-clima">No information</p>
+        </div>
+    
+        <p id="temperatura-actual">0°C</p>
+    
+        <div id="contenedor-botones">
+            <button id="boton-unidad-temperatura-C" class="boton-unidad-temperatura">°C</button>
+            <button id="boton-unidad-temperatura-F" class="boton-unidad-temperatura">°F</button>
+        </div>
+    
+        <div id="contenedor-detalles-clima">
+    
+            <div class="detalles-clima">
+                <div class="contenedor-icono"><i class='bx bx-wind' id="icono-detalles-clima"></i></div>
+                <div class="info-detalles-clima">
+                    <p id="viento" class="detalle-clima">0 m/s</p>
+                    <p class="titulo-detalles-clima">WIND</p>
+                </div>
+            </div>
+            
+            <div class="detalles-clima">
+                <div class="contenedor-icono"><i class='bx bx-cloud' id="icono-detalles-clima"></i></div>
+                <div class="info-detalles-clima">
+                    <p id="chances-lluvia" class="detalle-clima">0%</p>
+                    <p class="titulo-detalles-clima">CLOUDS</p>
+                </div>
+            </div>
+            
+            <div class="detalles-clima">
+                <div class="contenedor-icono"><i class='bx bx-droplet' id="icono-detalles-clima"></i></div>
+                <div class="info-detalles-clima">
+                    <p id="humedad" class="detalle-clima">0%</p>
+                    <p class="titulo-detalles-clima">HUMIDITY</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
