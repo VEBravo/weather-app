@@ -115,10 +115,11 @@ body{
 /* Info clima actual */
 #contenedor-info-clima{
     display: flex;
+    align-items: center;
 }
 
 #foto-clima{
-    width: 30px;
+    width: 60px;
     display: none;
 }
 
