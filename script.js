@@ -147,7 +147,7 @@ botonBusqueda.addEventListener("click", function(){
         fetchweather(ciudad); 
     }
     else{
-        alert("Ingrese una ciudad válida");
+        alert("Ingrese una ciudad");
     }
 
 });
@@ -156,7 +156,9 @@ botonBusqueda.addEventListener("click", function(){
 function fetchweather(city){
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
     .then(data => data.json())
-    .then(data => mostrarClima(data));
+    .then(data => mostrarClima(data)).catch(data =>
+        alert("Ingrese una ciudad válida")
+    )
 }
 
 function mostrarClima(data){
